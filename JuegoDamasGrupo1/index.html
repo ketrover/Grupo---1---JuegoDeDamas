@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damas - almoril00</title>
+    <meta name="description" content="Damas - Desarrollo de Aplicaciones Web" />
+    <meta name="author" content="almoril, almoril00" />
+    <meta name="keywords" content="damas, web, html, css, javascript, almoril" />
+
+    <link href="estilo.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(69461575, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/69461575" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+
+<body>
+    <div class="columna">
+        <div id="tablero">
+            <div class="casillas"></div>
+            <div class="fichas">
+                <div class="jugador1fichas">
+                </div>
+                <div class="jugador2fichas">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columna">
+        <div class="logojuego">
+            <img id="responsive" src="img/damas-logo.png" alt="Logo Damas" />
+        </div>
+        <div class="info">
+            <h1>Juego de Damas</h1>
+            <hr>
+            <p>By <a href="#" target="_blank">Keyver Mejia - Grupo 1.</a> - <a href="" target="_blank">GitHub</a></p>
+        </div>
+        <div class="estadisticas">
+            <h2>Estadísticas</h2>
+            <div class="wrapper">
+                <div id="jugador1">
+                    <h3>J1 (Rojas)</h3>
+                </div>
+                <div id="jugador2">
+                    <h3>J2 (Azules)</h3>
+                </div>
+            </div>
+            <div class="turno"></div>
+            <div class="clearfix">
+                <p id="infomensaje"> </p>
+                <span id="ganador"></span>
+            </div>
+            <button id="nuevojuego"><span>NUEVO JUEGO</span></button>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>

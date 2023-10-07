@@ -1,0 +1,287 @@
+ @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+ html,
+ body {
+     background-color: rgb(0, 172, 0);
+     box-shadow: 2px 2px 60px black;
+     color: #333333;
+     font-family: 'Courier Prime', monospace;
+     font-size: 16px;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     position: absolute;
+ }
+ 
+ html h1,
+ body h1 {
+     margin-top: 10px;
+     margin-bottom: 0px;
+ }
+ 
+ html h2,
+ body h2 {
+     font-size: 1.3em;
+ }
+ 
+ html h3,
+ body h3 {
+     font-size: 1.1em;
+ }
+ 
+ html a,
+ body a {
+     text-decoration: none;
+     color: #333333;
+     font-weight: 700;
+ }
+ 
+ html a:hover,
+ body a:hover {
+     text-decoration: underline;
+ }
+ 
+ html hr,
+ body hr {
+     background-color: #333;
+     background-image: linear-gradient(to right, #333333, #ccc);
+     height: 1px;
+     border: 0;
+ }
+ 
+ html .clearfix,
+ body .clearfix {
+     clear: both;
+ }
+ 
+ div.columna {
+     height: 100%;
+     min-height: 100%;
+     width: 50%;
+     position: relative;
+     float: left;
+     overflow: auto;
+ }
+ 
+ @media screen and (max-width: 1000px) {
+     div.columna {
+         overflow: hidden;
+         height: auto;
+         width: 100% !important;
+     }
+ }
+ 
+ div.logojuego,
+ div.info,
+ div.estadisticas {
+     background-color: #aac7c7;
+     color: #f3eef7;
+     text-shadow: 2px 2px 20px black;
+     border: 8px solid rgb(0, 255, 55);
+     box-shadow: 1px 1px 30px #232621;
+     box-shadow: 2px 2px 20px greenyellow;
+     width: 70%;
+     margin: 13vmin auto 0;
+     box-sizing: border-box;
+     padding: 5px 30px;
+     border-radius: 3px;
+ }
+ 
+ div.info,
+ div.estadisticas {
+     margin: 25px auto !important;
+ }
+ 
+ div.estadisticas .wrapper {
+     display: flex;
+ }
+ 
+ div.estadisticas #jugador1 {
+    box-shadow: 2px 2px 20px #f14848;
+     background-color: #ca4f5f;
+     color: #ffffff;
+     text-align: center;
+     display: inline-block;
+     width: 50%;
+     float: none;
+     box-sizing: border-box;
+     padding: 0 5px 5px;
+     border-top-left-radius: 3px;
+ }
+ 
+ div.estadisticas #jugador1 .fichaCapturada {
+     background-color: #2c2ca0;
+     box-shadow: 2px 2px 20px #2c2ca0;
+     width: 2.4vmin;
+     height: 2.4vmin;
+     background-size: 65%;
+     background-repeat: no-repeat;
+     background-position: center;
+     border-radius: 6vmin;
+     display: inline-block;
+     box-sizing: border-box;
+     transition: all 0.2s linear;
+     margin: 5px;
+ }
+ 
+ div.estadisticas #jugador2 {
+     background-color: #2c2ca0;
+     box-shadow: 2px 2px 20px #486df1;
+     color: #f1f1ff;
+     /* color: #cfa14a; */
+     text-align: center;
+     display: inline-block;
+     width: 50%;
+     float: none;
+     box-sizing: border-box;
+     padding: 0 5px 5px;
+     border-top-right-radius: 3px;
+ }
+ 
+ div.estadisticas #jugador2 .fichaCapturada {
+     background-color: #ca4f5f;
+     box-shadow: 2px 2px 20px #f14848;
+     width: 2.4vmin;
+     height: 2.4vmin;
+     background-size: 65%;
+     background-repeat: no-repeat;
+     background-position: center;
+     border-radius: 6vmin;
+     display: inline-block;
+     box-sizing: border-box;
+     transition: all 0.2s linear;
+     margin: 5px;
+ }
+ 
+ div.estadisticas div.turno {
+     background: linear-gradient(to right, #cfa14a 25%, transparent 50%);
+     height: 8px;
+     width: 100%;
+     border-radius: 0 0 3px 3px;
+ }
+ 
+ div.estadisticas span#ganador {
+     text-align: center;
+     display: block;
+     padding: 10px 0 0;
+ }
+ 
+ div.estadisticas button#nuevojuego {
+     background-color: #16c74b;
+     box-shadow: 1px 1px 30px #232621;
+     color: #F1F1FF;
+     display: block;
+     border: 0;
+     border-radius: 5px;
+     cursor: pointer;
+     margin: 20px auto 10px;
+     padding: 10px;
+     transition: 0.5s;
+     font-family: 'Courier Prime', monospace;
+     font-size: 16px;
+ }
+ 
+ div.estadisticas button#nuevojuego:hover {
+     background-color: #0c6b21;
+     font-size: 20px;
+ }
+ 
+ div#tablero {
+     box-shadow: 1px 1px 3px #232621;
+     background-color: #cfa14a;
+     border: 15px solid rgb(0, 255, 0);
+     box-shadow: 2px 2px 60px rgb(68, 255, 68);
+     position: absolute;
+     top: calc(50% - 40vmin);
+     left: calc(50% - 40vmin);
+     width: 80vmin;
+     height: 80vmin;
+     border-radius: 5px;
+     overflow: hidden;
+ }
+ 
+ div#tablero .casilla {
+     background-color: #232621;
+     width: 10vmin;
+     height: 10vmin;
+     position: absolute;
+ }
+ 
+ div#tablero .jugador1fichas .ficha {
+     background-color: #ca4f5f;
+     border: 1vmin solid #8f0000;
+     box-shadow: 2px 2px 20px rgb(247, 0, 0);
+     position: absolute;
+     width: 8vmin;
+     height: 8vmin;
+     background-size: 65%;
+     background-repeat: no-repeat;
+     background-position: center;
+     border-radius: 6vmin;
+     display: inline-block;
+     box-sizing: border-box;
+     transition: all 0.2s linear;
+     margin-top: 1vmin;
+     margin-left: 1vmin;
+     cursor: pointer;
+ }
+ 
+ div#tablero .jugador1fichas .ficha.seleccionada {
+     box-shadow: 0 0 10px 5px #49b7cf;
+ }
+ 
+ div#tablero .jugador2fichas .ficha {
+     background-color: #6d6dcf;
+     border: 1vmin solid #2c2ca0;
+     box-shadow: 2px 2px 20px #0000ff;
+     position: absolute;
+     width: 8vmin;
+     height: 8vmin;
+     background-size: 65%;
+     background-repeat: no-repeat;
+     background-position: center;
+     border-radius: 6vmin;
+     display: inline-block;
+     box-sizing: border-box;
+     transition: all 0.2s linear;
+     margin-top: 1vmin;
+     margin-left: 1vmin;
+     cursor: pointer;
+ }
+ 
+ div#tablero .jugador2fichas .ficha.seleccionada {
+     box-shadow: 0 0 10px 5px #16A8C7;
+ }
+ 
+ #responsive {
+     width: 100%;
+     height: auto;
+ }
+ 
+ @keyframes anim {
+     0% {
+         color: #ca4f5f;
+     }
+     25% {
+         color: #cfa14a;
+     }
+     50% {
+         color: #000;
+     }
+     75% {
+         color: #ca4f5f;
+     }
+     100% {
+         color: #cfa14a;
+     }
+ }
+ 
+ #ganador {
+     animation-name: anim;
+     animation-duration: 5s;
+     animation-iteration-count: infinite;
+     font-size: 1.2em;
+ }
+
